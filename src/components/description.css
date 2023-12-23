@@ -1,0 +1,42 @@
+.section__descriptions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.2); /* Use rgba for transparency */
+    padding: 1rem;
+    border-radius: 0.4rem;
+    backdrop-filter: blur(5px); /* Add backdrop-filter for the glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: add border for better visibility */
+}
+
+.description__card-icon {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 12px;
+    
+}
+
+.description__card-icon>small {
+    text-transform: capitalize;
+}
+
+/* responsive */
+
+@media screen and (max-width: 1024px) {
+    .section__descriptions {
+        grid-template-columns: 1fr 1fr;
+    }
+}
